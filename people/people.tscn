@@ -1,0 +1,467 @@
+[gd_scene format=3 uid="uid://dm84c1p3k1lmc"]
+
+[ext_resource type="Texture2D" uid="uid://bm4xxe63yl5jh" path="res://people/people.png" id="1_0fjxd"]
+[ext_resource type="Script" uid="uid://l0vd5o0r70e4" path="res://people/people.gd" id="1_kamom"]
+[ext_resource type="Texture2D" uid="uid://bcmiilfpi7u7x" path="res://ambulance/shadow.png" id="2_xrrse"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fjxd"]
+size = Vector2(4, 1)
+
+[sub_resource type="Animation" id="Animation_xqxlp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_6k16y"]
+resource_name = "die0"
+length = 11.0
+step = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(11),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_lshtb"]
+resource_name = "die1"
+length = 11.0
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(11),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ocjbl"]
+resource_name = "die2"
+length = 30.0
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(30),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_7dmig"]
+resource_name = "die20"
+step = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_18c4m"]
+resource_name = "die21"
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_wo0r2"]
+resource_name = "die22"
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_mobfi"]
+resource_name = "die23"
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [19]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vc8vc"]
+resource_name = "die3"
+length = 30.0
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [19]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(30),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_h2hr5"]
+resource_name = "idle0"
+length = 0.6667000198692085
+loop_mode = 1
+step = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+
+[sub_resource type="Animation" id="Animation_8jnn4"]
+resource_name = "idle1"
+length = 0.6667000198692085
+loop_mode = 1
+step = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [5, 7]
+}
+
+[sub_resource type="Animation" id="Animation_giqcq"]
+resource_name = "idle2"
+length = 0.6667000198692085
+loop_mode = 1
+step = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [10, 12]
+}
+
+[sub_resource type="Animation" id="Animation_m8sku"]
+resource_name = "idle3"
+length = 0.6667000198692085
+loop_mode = 1
+step = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [15, 17]
+}
+
+[sub_resource type="Animation" id="Animation_kamom"]
+resource_name = "run0"
+length = 0.5714428826883435
+loop_mode = 1
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14285715, 0.2857143, 0.42857146),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 3, 0]
+}
+
+[sub_resource type="Animation" id="Animation_hh6x7"]
+resource_name = "run1"
+length = 0.5714428826883435
+loop_mode = 1
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14285715, 0.2857143, 0.42857146),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 5, 8, 5]
+}
+
+[sub_resource type="Animation" id="Animation_udwpo"]
+resource_name = "run2"
+length = 0.5714428826883435
+loop_mode = 1
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14285715, 0.2857143, 0.42857146),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [11, 10, 13, 10]
+}
+
+[sub_resource type="Animation" id="Animation_0i2se"]
+resource_name = "run3"
+length = 0.5714428826883435
+loop_mode = 1
+step = 0.14285715
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14285715, 0.2857143, 0.42857146),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [16, 15, 18, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xqxlp"]
+_data = {
+&"RESET": SubResource("Animation_xqxlp"),
+&"die0": SubResource("Animation_6k16y"),
+&"die1": SubResource("Animation_lshtb"),
+&"die2": SubResource("Animation_ocjbl"),
+&"die20": SubResource("Animation_7dmig"),
+&"die21": SubResource("Animation_18c4m"),
+&"die22": SubResource("Animation_wo0r2"),
+&"die23": SubResource("Animation_mobfi"),
+&"die3": SubResource("Animation_vc8vc"),
+&"idle0": SubResource("Animation_h2hr5"),
+&"idle1": SubResource("Animation_8jnn4"),
+&"idle2": SubResource("Animation_giqcq"),
+&"idle3": SubResource("Animation_m8sku"),
+&"run0": SubResource("Animation_kamom"),
+&"run1": SubResource("Animation_hh6x7"),
+&"run2": SubResource("Animation_udwpo"),
+&"run3": SubResource("Animation_0i2se")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrrse"]
+size = Vector2(6, 4)
+
+[node name="people" type="CharacterBody2D" unique_id=1412608243 groups=["people"]]
+script = ExtResource("1_kamom")
+
+[node name="shadow" type="Sprite2D" parent="." unique_id=1532286267]
+modulate = Color(1, 1, 1, 0.47058824)
+position = Vector2(0, 5)
+scale = Vector2(5, 1)
+texture = ExtResource("2_xrrse")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1667472576]
+texture_filter = 1
+texture = ExtResource("1_0fjxd")
+hframes = 4
+vframes = 5
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=570089283]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_0fjxd")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1655966955]
+libraries/ = SubResource("AnimationLibrary_xqxlp")
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=1808131564]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=998539494 groups=["people"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2083395007]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_xrrse")

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bbqcy5hq1hfwb"]
+
+[ext_resource type="PackedScene" uid="uid://k3sv4tq1v6qu" path="res://ambulance/ambulance.tscn" id="1_h5o24"]
+[ext_resource type="Script" uid="uid://carv38onhpo7w" path="res://world/world.gd" id="1_mmdvd"]
+[ext_resource type="PackedScene" uid="uid://boiqspl0jtyws" path="res://ui/characterUI/characterUI.tscn" id="4_sc4t8"]
+[ext_resource type="PackedScene" uid="uid://ncvy2rdsbgr6" path="res://world/hospital/hopsital.tscn" id="5_mmdvd"]
+[ext_resource type="PackedScene" uid="uid://c7gonqjtakbbs" path="res://ui/score/score.tscn" id="6_fn3g3"]
+
+[node name="world" type="Node2D" unique_id=723294877]
+y_sort_enabled = true
+script = ExtResource("1_mmdvd")
+
+[node name="ambulance" parent="." unique_id=1203758904 instance=ExtResource("1_h5o24")]
+position = Vector2(240, 174)
+
+[node name="characterUI" parent="." unique_id=1441610713 instance=ExtResource("4_sc4t8")]
+
+[node name="hopsital" parent="." unique_id=9409844 instance=ExtResource("5_mmdvd")]
+position = Vector2(77, 78)
+
+[node name="score" parent="." unique_id=1138285693 instance=ExtResource("6_fn3g3")]
+
+[node name="ZombieTimer" type="Timer" parent="." unique_id=1051399368]
+autostart = true
+
+[node name="PersonTimer" type="Timer" parent="." unique_id=1805113891]
+autostart = true
+
+[connection signal="timeout" from="ZombieTimer" to="." method="_on_zombie_timer_timeout"]
+[connection signal="timeout" from="PersonTimer" to="." method="_on_person_timer_timeout"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://boiqspl0jtyws"]
+
+[ext_resource type="Script" uid="uid://lr3vw6b8nt8v" path="res://ui/characterUI/character_ui.gd" id="1_l4hcy"]
+[ext_resource type="Texture2D" uid="uid://b0f5vds4evktw" path="res://ui/characterUI/characterui.png" id="3_xy18q"]
+
+[node name="characterUI" type="CanvasLayer" unique_id=1441610713]
+script = ExtResource("1_l4hcy")
+
+[node name="characterUI" type="Sprite2D" parent="." unique_id=676603253]
+texture_filter = 1
+position = Vector2(221, 14)
+texture = ExtResource("3_xy18q")
+vframes = 5
+frame = 4

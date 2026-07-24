@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://duvocf2djdwu5"
+path="res://.godot/imported/retro-select-236670 copy.wav-63f47a6bb64f8f5f3f6501ee40647b36.sample"
+
+[deps]
+
+source_file="res://sounds/retro-select-236670 copy.wav"
+dest_files=["res://.godot/imported/retro-select-236670 copy.wav-63f47a6bb64f8f5f3f6501ee40647b36.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

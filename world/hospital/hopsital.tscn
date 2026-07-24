@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ncvy2rdsbgr6"]
+
+[ext_resource type="Texture2D" uid="uid://dhcwybhoxgwhe" path="res://icon.svg" id="1_gf7lh"]
+[ext_resource type="Script" uid="uid://p041f87aybt6" path="res://world/hospital/hopsital.gd" id="1_l1277"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gf7lh"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rfpe1"]
+radius = 56.008926
+
+[node name="hopsital" type="StaticBody2D" unique_id=9409844]
+script = ExtResource("1_l1277")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=727260595]
+shape = SubResource("RectangleShape2D_gf7lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1339810555]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_gf7lh")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1854436926]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1339484929]
+shape = SubResource("CircleShape2D_rfpe1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

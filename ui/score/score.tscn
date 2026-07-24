@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c7gonqjtakbbs"]
+
+[ext_resource type="FontFile" uid="uid://belak32rrngw8" path="res://ui/Awasete Powder.ttf" id="1_fhgf5"]
+[ext_resource type="Script" uid="uid://bh32yf127cmjy" path="res://ui/score/score.gd" id="1_u1s8w"]
+
+[node name="score" type="CanvasLayer" unique_id=1138285693]
+script = ExtResource("1_u1s8w")
+
+[node name="Label" type="Label" parent="." unique_id=433537346]
+texture_filter = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
+theme_override_fonts/font = ExtResource("1_fhgf5")
+theme_override_font_sizes/font_size = 8
+text = "SCORE: 0"
+
+[node name="Label2" type="Label" parent="." unique_id=1041808938]
+texture_filter = 1
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.85098, 0.85098, 0.85098, 1)
+theme_override_fonts/font = ExtResource("1_fhgf5")
+theme_override_font_sizes/font_size = 8
+text = "TIME: 60"

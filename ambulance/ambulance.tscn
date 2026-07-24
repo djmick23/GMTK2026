@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://k3sv4tq1v6qu"]
+
+[ext_resource type="Texture2D" uid="uid://bntsqtur0x5ss" path="res://ambulance/ambulance.png" id="1_5com3"]
+[ext_resource type="Script" uid="uid://cks8umlx5mmfk" path="res://ambulance/ambulance.gd" id="1_cmbjj"]
+[ext_resource type="Texture2D" uid="uid://bcmiilfpi7u7x" path="res://ambulance/shadow.png" id="2_kso0y"]
+[ext_resource type="Script" uid="uid://bwlee3b2m0ewg" path="res://ambulance/trail.gd" id="4_bopdc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5com3"]
+size = Vector2(18, 10.5)
+
+[sub_resource type="Curve" id="Curve_f3sb7"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_0gqk7"]
+_data = [Vector2(0.00995025, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="ambulance" type="CharacterBody2D" unique_id=1203758904 groups=["ambulance"]]
+z_index = 1
+script = ExtResource("1_cmbjj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1366074077]
+position = Vector2(0, 0.75)
+shape = SubResource("RectangleShape2D_5com3")
+
+[node name="sprites" type="Node2D" parent="." unique_id=201785446]
+position = Vector2(0, -9)
+
+[node name="0" type="Sprite2D" parent="sprites" unique_id=237300096]
+modulate = Color(1, 1, 1, 0.47058824)
+position = Vector2(0, 11.000001)
+scale = Vector2(17, 7)
+texture = ExtResource("2_kso0y")
+
+[node name="1" type="Sprite2D" parent="sprites" unique_id=1822077742]
+texture_filter = 1
+position = Vector2(0, 10)
+texture = ExtResource("1_5com3")
+offset = Vector2(0, -10)
+hframes = 3
+vframes = 4
+
+[node name="TireL" type="Node2D" parent="sprites/1" unique_id=1854674097]
+position = Vector2(-5.5, -3.5)
+
+[node name="Trail" type="Line2D" parent="sprites/1/TireL" unique_id=1323033785]
+width = 1.0
+width_curve = SubResource("Curve_f3sb7")
+default_color = Color(0, 0, 0, 0.627451)
+script = ExtResource("4_bopdc")
+
+[node name="Particles" type="CPUParticles2D" parent="sprites/1/TireL" unique_id=559614964]
+emitting = false
+lifetime = 0.2
+explosiveness = 0.6
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2(-1, 0)
+gravity = Vector2(0, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+color = Color(0.51718444, 0.5171845, 0.51718444, 1)
+
+[node name="TireR" type="Node2D" parent="sprites/1" unique_id=924061166]
+position = Vector2(-5.5, 3.5)
+
+[node name="Trail" type="Line2D" parent="sprites/1/TireR" unique_id=354400169]
+width = 1.0
+width_curve = SubResource("Curve_0gqk7")
+default_color = Color(0, 0, 0, 0.627451)
+script = ExtResource("4_bopdc")
+
+[node name="Particles" type="CPUParticles2D" parent="sprites/1/TireR" unique_id=1966388984]
+emitting = false
+lifetime = 0.2
+explosiveness = 0.6
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2(-1, 0)
+gravity = Vector2(0, 0)
+initial_velocity_max = 20.0
+color = Color(0.51718444, 0.5171845, 0.51718444, 1)
+
+[node name="2" type="Sprite2D" parent="sprites" unique_id=259694930]
+texture_filter = 1
+position = Vector2(0, 9)
+rotation = -0.006027096
+texture = ExtResource("1_5com3")
+offset = Vector2(0, -9)
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="3" type="Sprite2D" parent="sprites" unique_id=67386718]
+texture_filter = 1
+position = Vector2(0, 8)
+texture = ExtResource("1_5com3")
+offset = Vector2(0, -8)
+hframes = 3
+vframes = 4
+frame = 2
+
+[node name="4" type="Sprite2D" parent="sprites" unique_id=615018611]
+texture_filter = 1
+position = Vector2(0, 7)
+texture = ExtResource("1_5com3")
+offset = Vector2(0, -7)
+hframes = 3
+vframes = 4
+frame = 3
+
+[node name="5" type="Sprite2D" parent="sprites" unique_id=174893283]
+texture_filter = 1
+position = Vector2(0, 6)
+texture = ExtResource("1_5com3")
+offset = Vector2(0, -6)
+hframes = 3
+vframes = 4
+frame = 4
+
+[node name="6" type="Sprite2D" parent="sprites" unique_id=700550625]
+texture_filter = 1
+position = Vector2(0, 5)
+texture = ExtResource("1_5com3")
+offset = Vector2(0, -5)
+hframes = 3
+vframes = 4
+frame = 5
+
+[node name="7" type="Sprite2D" parent="sprites" unique_id=1510304976]
+texture_filter = 1
+position = Vector2(0, 4)
+texture = ExtResource("1_5com3")
+offset = Vector2(0, -4)
+hframes = 3
+vframes = 4
+frame = 6
+
+[node name="8" type="Sprite2D" parent="sprites" unique_id=1626484778]
+texture_filter = 1
+position = Vector2(0, 3)
+texture = ExtResource("1_5com3")
+offset = Vector2(0, -3)
+hframes = 3
+vframes = 4
+frame = 7
+
+[node name="9" type="Sprite2D" parent="sprites" unique_id=900963778]
+texture_filter = 1
+position = Vector2(0, 2)
+texture = ExtResource("1_5com3")
+offset = Vector2(0, -2)
+hframes = 3
+vframes = 4
+frame = 8
+
+[node name="10" type="Sprite2D" parent="sprites" unique_id=979627828]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("1_5com3")
+offset = Vector2(0, -1)
+hframes = 3
+vframes = 4
+frame = 9
+
+[node name="11" type="Sprite2D" parent="sprites" unique_id=368656792]
+texture_filter = 1
+texture = ExtResource("1_5com3")
+hframes = 3
+vframes = 4
+frame = 10
+
+[node name="12" type="Sprite2D" parent="sprites" unique_id=1121751553]
+texture_filter = 1
+position = Vector2(0, -1)
+texture = ExtResource("1_5com3")
+offset = Vector2(0, 1)
+hframes = 3
+vframes = 4
+frame = 11
+
+[node name="jumpPos" type="Node2D" parent="." unique_id=354367270]
+position = Vector2(0, -14)
+
+[node name="BufferTimer" type="Timer" parent="." unique_id=300011833]
+wait_time = 0.1
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=307439166]
+limit_left = 0
+limit_top = 0
+limit_right = 640
+limit_bottom = 480
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[connection signal="timeout" from="BufferTimer" to="." method="_on_buffer_timer_timeout"]

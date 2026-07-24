@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c38e5yl7om5mp"]
+
+[ext_resource type="AudioStream" uid="uid://cv3afxdrhcrx6" path="res://sounds/Splat1.mp3" id="1_7nlsv"]
+[ext_resource type="Script" uid="uid://h7lyjns35bmv" path="res://sounds/sfx_library.gd" id="1_jtbnn"]
+[ext_resource type="AudioStream" uid="uid://dq24ojwpykllq" path="res://sounds/Splat2.mp3" id="2_ma2aq"]
+[ext_resource type="AudioStream" uid="uid://cfvowjvqglcut" path="res://sounds/freesound-community-braking-on-gravel-bike-14691_jXE8Jd3o.mp3" id="4_71fr7"]
+[ext_resource type="AudioStream" uid="uid://bdhpo0r3tfgsp" path="res://sounds/floraphonic-rubber-tire-screech-6-202577.mp3" id="5_cnmns"]
+[ext_resource type="AudioStream" uid="uid://chdvbo8ainuhe" path="res://sounds/Pickup2.wav" id="7_fcdks"]
+[ext_resource type="AudioStream" uid="uid://cg6kdls7wjg54" path="res://sounds/u-mgq59j5ayf-sound-effect-car-crash-394903_FJXUxGUu.mp3" id="7_q8m61"]
+[ext_resource type="AudioStream" uid="uid://cjem1t17qjms1" path="res://sounds/hurt copy.wav" id="8_fcdks"]
+[ext_resource type="AudioStream" uid="uid://b6jro0kmi5oke" path="res://sounds/Audio-Message (mp3cut (mp3cut.net) copy.mp3" id="9_8ddhb"]
+[ext_resource type="AudioStream" uid="uid://dfh86abcipva8" path="res://sounds/PowerUp13.wav" id="10_s486y"]
+[ext_resource type="AudioStream" uid="uid://duvocf2djdwu5" path="res://sounds/retro-select-236670 copy.wav" id="11_2yev5"]
+
+[node name="SFXLibrary" type="Node" unique_id=1645343235]
+script = ExtResource("1_jtbnn")
+
+[node name="Splat1" type="AudioStreamPlayer" parent="." unique_id=927625764]
+stream = ExtResource("1_7nlsv")
+
+[node name="Splat2" type="AudioStreamPlayer" parent="." unique_id=395176367]
+stream = ExtResource("2_ma2aq")
+
+[node name="Drift1" type="AudioStreamPlayer" parent="." unique_id=121064414]
+stream = ExtResource("4_71fr7")
+pitch_scale = 0.8
+
+[node name="Drift2" type="AudioStreamPlayer" parent="." unique_id=800610209]
+stream = ExtResource("5_cnmns")
+volume_db = -20.0
+pitch_scale = 0.8
+
+[node name="Drive" type="AudioStreamPlayer" parent="." unique_id=1507916778]
+volume_db = -10.0
+
+[node name="Land" type="AudioStreamPlayer" parent="." unique_id=1020920354]
+stream = ExtResource("7_q8m61")
+volume_db = -5.0
+
+[node name="Score" type="AudioStreamPlayer" parent="." unique_id=1446768542]
+stream = ExtResource("7_fcdks")
+
+[node name="Hurt" type="AudioStreamPlayer" parent="." unique_id=1933031165]
+stream = ExtResource("8_fcdks")
+
+[node name="Zombie" type="AudioStreamPlayer" parent="." unique_id=1143307693]
+stream = ExtResource("9_8ddhb")
+volume_db = 15.0
+
+[node name="Score2" type="AudioStreamPlayer" parent="." unique_id=1372049077]
+stream = ExtResource("10_s486y")
+
+[node name="SwitchMenu" type="AudioStreamPlayer" parent="." unique_id=1869650277]
+stream = ExtResource("11_2yev5")
